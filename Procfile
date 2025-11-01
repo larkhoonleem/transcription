@@ -1,0 +1,1 @@
+web: streamlit run voice_memo_transcription.py --server.port=$PORT --server.address=0.0.0.0
