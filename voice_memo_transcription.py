@@ -20,7 +20,7 @@ EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 client = OpenAI(api_key=API_KEY)
 
 st.set_page_config(page_title="Voice Memo Transcriber", layout="centered")
-st.title("🎙️ iPhone Voice Memo Transcriber & Emailer")
+st.title("🎙️ Voice Memo Transcriber")
 
 # ------------------ Session State ------------------
 if "transcription" not in st.session_state:
@@ -76,7 +76,7 @@ def transcribe_audio(audio_bytes, filename):
         return None
 
 # ------------------ Upload UI ------------------
-st.markdown("### 📁 Upload your iPhone voice memo or any audio file")
+st.markdown("### 📁 Upload your voice memo file")
 uploaded_audio = st.file_uploader(
     "Choose an audio file",
     type=["m4a", "mp3", "wav", "aac", "ogg"]
