@@ -82,9 +82,7 @@ uploaded_audio = st.file_uploader(
     type=["m4a", "mp3", "wav", "aac", "ogg"]
 )
 
-#email_receiver = st.text_input("📧 Enter your email address to receive the transcription")
-
-email_receiver = EMAIL_SENDER
+email_receiver = st.text_input("📧 Enter your email address to receive the transcription")
 
 if uploaded_audio and email_receiver:
     if st.button("🚀 Transcribe and Send"):
